@@ -7,17 +7,6 @@ return {
         ft = { "markdown" },
         build = function() vim.fn["mkdp#util#install"]() end,
     },
-    { -- filetree
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        requires = {
-          "nvim-tree/nvim-web-devicons",
-        },
-        config = function()
-          require("nvim-tree").setup {}
-        end,
-    },
     {
       "kkharji/lspsaga.nvim",
       config = function ()
@@ -139,4 +128,10 @@ return {
         "rcarriga/nvim-notify",
       }
     },
+    {
+      "stevearc/oil.nvim",
+      config = function ()
+        require("oil").setup()
+      end
+    }
 }
